@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Generatore casuale di status Tinder</title>
+	<meta property="og:title" content="Generatore casuale di status Tinder" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Genera status casuali per uomini o donne da usare su tinder" />
+	<!-- <meta property="og:image" content="images/codeat.jpg" /> -->
+	<link rel="stylesheet" type="text/css" href="css/sanitize.min.css">
+ 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+ 	<script src="js/vue.min.js"></script><!-- v2.5.9 -->
+</head>
+<body>
+<div id="tinderapp">
+	<section id="tinder-generator" class="tinder-generator">
+		<div class="wrap">
+			<div class="selection">
+				<h1>Genera il tuo status Tinder</h1>
+				<div class="flex-grid">
+					<div class="col">
+						<h3>Sesso</h3>
+						<!-- <div>
+										            <input type="radio" id="male" value="male" name="male" v-model="sesso" />
+										            <label for="male">Male</label>
+										        </div> -->
+				        <div>
+				            <input type="radio" id="female" value="female" name="female" v-model="sesso" />
+				            <label for="female">Female</label>
+				        </div>
+					</div><!-- col -->
+					<div class="col">
+						<h3>Genera</h3>
+						<div>
+				            <input type="radio" id="status" value="status" name="status" v-model="genera" />
+				            <label for="status">Status</label>
+				        </div>
+				        <!-- <div>
+				            <input type="radio" id="chat" value="chat" name="chat" v-model="genera" />
+				            <label for="chat">Primo messaggio</label>
+				        </div> -->
+					</div><!-- col -->
+				</div><!-- grid -->
+				<button class="small" v-on:click="generateStatus()" v-show="genera === 'status'">Genera</button>
+			</div>
+			<section class="output-male" v-show="sesso === 'male'">
+				<div v-if="genera === 'status'">
+					<h2>MALE</h2>
+				</div>
+			</section>
+			<section class="output-female" v-show="sesso === 'female'">
+				<div v-if="genera === 'status'">
+					<p class="info-status"></p>
+				</div>
+			</section>
+		</div> <!-- wrapper -->
+	</section>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

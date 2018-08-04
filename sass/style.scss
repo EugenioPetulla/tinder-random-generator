@@ -1,0 +1,445 @@
+/* Table of content
+/*
+/* - Variables
+/* - Fonts Import
+/* - Generic Styles
+/* - Range Styles
+/*----------------------------*/
+
+/* Set Vars
+------------------------------*/
+$primary-color: #fff;
+$secondary-color: blue;
+$first-font-family: 'Montserrat', sans-serif;
+
+
+/* Fonts Import
+------------------------------*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.eot');
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Bold.woff') format('woff'),
+    url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Generic Styles
+------------------------------*/
+body {
+	font-family: $first-font-family;
+	overflow: auto;
+	&.over {
+		overflow: hidden;
+	}
+}
+
+p {
+	margin: 10px 0;
+	line-height: 1.6;
+}
+
+a {
+	font-weight: 700;
+	color: #333;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+		color: #999;
+	}
+}
+
+blockquote {
+    font-size: 22px;
+    color: $primary-color;
+    padding: 40px 40px 15px;
+    background: #444;
+    border-radius: 4px;
+    margin: 60px 40px;
+    font-style: italic;
+    h5 {
+    	font-size: 18px;
+    	margin-top: 18px;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+.wrap {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 20px 80px;
+}
+
+/* Sections
+------------------------------*/
+section {
+	padding: 80px 40px;
+	&.small-pad {
+		padding: 20px 40px;
+	}
+	&.alt {
+		background: url('../images/background.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		color: $primary-color;
+		padding: 0;
+		.wrap {
+			padding: 80px 40px;
+		}
+	}
+	&.colored {
+		background: $secondary-color;
+		color: $primary-color;
+		background-color: #4e3a4c;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='456' height='456' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23644a61' stroke-width='2'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23694e66'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+		background-size: auto auto;
+		background-position: center;
+		background-repeat: repeat;
+		a {
+			color: $primary-color;
+		}
+	}
+}
+
+.section-title {
+	font-size: 48px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.section-description {
+	text-align: justify;
+}
+
+
+/* Flexbox Grid
+------------------------------*/
+.flex-grid {
+	display: flex;
+	flex-direction: row;
+	margin: 40px 0;
+}
+
+.col {
+	flex: 1;
+}
+
+/* Preventivatore
+------------------------------*/
+
+.tinder-generator {
+	padding-top: 20px;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	left: 0;
+	background: white;
+	width: 100%;
+	overflow: scroll;
+	.flex-grid {
+		margin: 20px 0 0;
+		.col {
+			padding: 0 20px;
+		}
+	}
+	.serv {
+		small {
+			display: block;
+			margin-top: 10px;
+			&.desc-counter {
+    			margin-top: 0;
+    			margin-bottom: 10px;
+    			font-weight: 700;
+			}
+		}
+		.icon {
+			max-width: 75px;
+			display: block;
+			margin: 0 20px 20px 0;
+			float: left;
+		}
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		position: absolute;
+		z-index: 999999;
+		opacity: 0;
+		width: 24px;
+		height: 24px;
+	}
+	label {
+		position: relative;
+		display: inline-block;
+		padding: 0 0 0 2em;
+		height: 1.5em;
+		line-height: 1.5;
+		cursor: pointer;
+		font-weight: 700;
+	 	&::before,
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 1.5em;
+			height: 1.5em;
+			-webkit-transition: .25s all ease;
+			-o-transition: .25s all ease;
+			transition: .25s all ease;
+		}
+		&::before {
+			content: " ";
+			border: 2px solid #333;
+			border-radius: 20%;
+		}
+	}
+	input {
+		cursor: pointer;
+	}
+	input[type="checkbox"] + label::after {
+	  content: "\2714";
+	  color: $primary-color;
+	  line-height: 1.5;
+	  text-align: center;
+	}
+	input[type="radio"] + label::before {
+	  border-radius: 50%;
+	}
+	input[type=radio] + label::after {
+	  content: " ";
+	  top: .25em;
+	  left: .25em;
+	  width: 1em;
+	  height: 1em;
+	  background: $secondary-color;
+	  border: .2em solid $primary-color;
+	  border-radius: 50%;
+	}
+	input[type="checkbox"]:checked + label::before,
+	input[type="radio"]:checked + label::before {
+	  background: $secondary-color;
+	  border-color: $secondary-color;
+	}
+	input[type="checkbox"] + label::after,
+	input[type=radio] + label::after {
+	  -webkit-transform: scale(0);
+	  -ms-transform: scale(0);
+	  -o-transform: scale(0);
+	  transform: scale(0);
+	}
+	input[type="checkbox"]:checked + label::after,
+	input[type=radio]:checked + label::after {
+	  -webkit-transform: scale(1);
+	  -ms-transform: scale(1);
+	  -o-transform: scale(1);
+	  transform: scale(1);
+	}
+	input[type=range] {
+		-webkit-appearance: none;
+		width: 100%;
+		margin: 5.3px 0;
+		display: block;
+	}
+	input[type=range]:focus {
+		outline: none;
+	}
+	input[type=range]::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 1.4px;
+		cursor: pointer;
+		box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+		background: #333333;
+		border-radius: 0px;
+		border: 0px solid #010101;
+	}
+	input[type=range]::-webkit-slider-thumb {
+		box-shadow: 0px 0px 3.1px #333333, 0px 0px 0px #404040;
+		border: 2px solid $primary-color;
+		height: 12px;
+		width: 12px;
+		border-radius: 12px;
+		background: rgba(78, 58, 76, 0.93);
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: -5.3px;
+	}
+	input[type=range]:focus::-webkit-slider-runnable-track {
+		background: #404040;
+	}
+	input[type=range]::-moz-range-track {
+		width: 100%;
+		height: 1.4px;
+		cursor: pointer;
+		box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+		background: #333333;
+		border-radius: 0px;
+		border: 0px solid #010101;
+	}
+	input[type=range]::-moz-range-thumb {
+		box-shadow: 0px 0px 3.1px #333333, 0px 0px 0px #404040;
+		border: 2px solid $primary-color;
+		height: 12px;
+		width: 12px;
+		border-radius: 12px;
+		background: rgba(78, 58, 76, 0.93);
+		cursor: pointer;
+	}
+	input[type=range]::-ms-track {
+		width: 100%;
+		height: 1.4px;
+		cursor: pointer;
+		background: transparent;
+		border-color: transparent;
+		color: transparent;
+	}
+	input[type=range]::-ms-fill-lower {
+		background: #262626;
+		border: 0px solid #010101;
+		border-radius: 0px;
+		box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	}
+	input[type=range]::-ms-fill-upper {
+		background: #333333;
+		border: 0px solid #010101;
+		border-radius: 0px;
+		box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	}
+	input[type=range]::-ms-thumb {
+		box-shadow: 0px 0px 3.1px #333333, 0px 0px 0px #404040;
+		border: 2px solid $primary-color;
+		height: 12px;
+		width: 12px;
+		border-radius: 12px;
+		background: rgba(78, 58, 76, 0.93);
+		cursor: pointer;
+		height: 1.4px;
+	}
+	input[type=range]:focus::-ms-fill-lower {
+		background: #333333;
+	}
+	input[type=range]:focus::-ms-fill-upper {
+		background: #404040;
+	}
+	input[type="text"],
+	input[type="email"],
+	textarea {
+	    border: 2px solid #333;
+		padding: 14px;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.4;
+		border-radius: 4px;
+		width: 98%;
+	}
+	input[type="email"] {
+		margin-top: 20px;
+	}
+	button {
+		border: 2px solid;
+		font-size: 16px;
+		font-weight: 700;
+		border-radius: 4px;
+		padding: 14px;
+		cursor: pointer;
+		background: $secondary-color;
+		border-color: $secondary-color;
+		line-height: 1.4;
+		width: 98%;
+		margin-top: 20px;
+		color: $primary-color;
+		text-decoration: none;
+		transition: all 350ms ease-in-out;
+		display: block;
+		text-align: center;
+		&.ghost {
+			background: transparent;
+			color: $secondary-color;
+		}
+		&:hover {
+			background: $secondary-color;
+			color: $primary-color;
+		}
+		&.small {
+			width: 350px;
+		}
+	}
+	.validazione {
+	    color: red;
+		font-weight: 700;
+		font-size: 18px;
+		background: #ddd;
+		padding: 22px;
+		border-radius: 0 0 4px 4px;
+		text-align: center;
+		border-top: 4px solid red;
+	}
+	.error-msg {
+		color: red;
+	}
+}
+
+
+
+
+/* Media Queries
+------------------------------*/
+
+@media screen and (max-width: 780px) {
+	.flex-grid {
+    	flex-direction: column;
+    	margin: 40px 0;
+    	&.reverse{
+    		flex-direction: column-reverse;
+    	}
+    	.col{
+    		padding: 10px 20px;
+    		&.image {
+    			margin-bottom: 40px;
+    		}
+    	}
+	}
+	.tinder-generator { 
+		h1 {
+			font-size: 24px;
+		}
+		h2 {
+			font-size: 18px;
+		}
+		h3 {
+			font-size: 16px;
+			font-weight: 400;
+		}
+		.flex-grid {
+    		margin: 0;
+		}
+		.user-input {
+    		margin-top: 40px;
+		}
+		.user-input .col input {
+    		margin-top: 10px;
+		}
+	}
+	section,
+	.wrap,
+	section.alt .wrap {
+		padding: 40px 20px;
+	}
+	.section-title {
+    	font-size: 28px;
+	}
+}
